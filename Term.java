@@ -1,6 +1,6 @@
 //need to implement the comparator to be able to use it
 import java.util.Comparator;
-//import java.util.String;
+import java.util.Arrays;
 
 public class Term implements Comparable<Term> {
 
@@ -55,7 +55,7 @@ public class Term implements Comparable<Term> {
 
     // Returns a string representation of this term in the following format:
     // the weight, followed by a tab, followed by the query.
-  public String toString() {return this.weight + '\t' + this.query;}
+  public String toString() {return this.weight + "\t" + this.query;}
 
     // unit testing (required)
   public static void main(String[] args) {
@@ -65,14 +65,18 @@ public class Term implements Comparable<Term> {
       System.out.println(tempTerm);
       System.out.println(otherTerm);
       
+      Term[] terms = {new Term("stress", 12), new Term("Lusth", 89), new Term("Cat", 134)};
+      for (Term term : terms){
+          System.out.println(term);
+      }
+      Arrays.sort(terms, Term.byReverseWeightOrder());
+      for (Term term : terms){
+          System.out.println(term);
+      }      
+      Arrays.sort(terms, Term.byPrefixOrder(3));
+      for (Term term : terms){
+          System.out.println(term);
+      }      
       
-      /**
-     * Testing To Do:
-     * toString -- written, not tested
-     * compareTo 
-     * byPrefixOrder
-     * byReverseWeightOrder
-     * Constructor -- written, not tested
-     */
   }
 }
