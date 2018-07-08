@@ -1,13 +1,13 @@
 /******************************************************************************
- *  Name:       
- *  LU ID:  
+ *  Name:  Abigail Payne     
+ *  LU ID:  L-something another
  *
  *  Partner Name:       
  *  Partner LU ID:      
  *  
  *
  *  Hours to complete assignment (optional):
- * Abigail- 2
+ * Abigail- 9 hours total
  ******************************************************************************/
 
 
@@ -56,8 +56,11 @@ numberOfMatches():
  *  may have used in creating your design.
  *****************************************************************************/
 
-1 . https://www.javatpoint.com/java-string-length
-
+1. https://www.javatpoint.com/java-string-length
+2. https://stackoverflow.com/questions/22571586/will-arrays-sort-increase-time-complexity-and-space-time-complexity
+3. https://www.geeksforgeeks.org/collections-sort-java-examples/
+4. https://rosettacode.org/wiki/Binary_search
+5. https://stackoverflow.com/questions/6000810/printing-with-t-tabs-does-not-result-in-aligned-columns
 
 
 
