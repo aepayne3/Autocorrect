@@ -36,7 +36,7 @@ public class Term implements Comparable<Term> {
   }
   
   public static class CompareByPrefixOrder implements Comparator<Term>{
-      //can't use default class because you need the r term
+      //can't use default constructor because you need the r term
       private int r;
       private CompareByPrefixOrder(int r){
           this.r = r;
