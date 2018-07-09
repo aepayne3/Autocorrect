@@ -1,5 +1,5 @@
-import java.util.Arrays;
-
+//import java.util.Arrays;
+import edu.princeton.cs.algs4.MergeX;
 
 public class Autocomplete {
     private final Term[] terms;
@@ -12,7 +12,8 @@ public class Autocomplete {
             if(terms[i] == null) throw new IllegalArgumentException();
             this.terms[i] = terms[i];
         }
-        Arrays.sort(this.terms);
+        //Arrays.sort(this.terms);
+        MergeX.sort(this.terms);
         
     }
 
@@ -21,17 +22,17 @@ public class Autocomplete {
         if (prefix == null) throw new IllegalArgumentException();
         int firstOccurance = BinarySearchDeluxe.firstIndexOf(this.terms, new Term(prefix,0), Term.byPrefixOrder(prefix.length()));
         //if not found
-      //  if (firstOccurance == -1) firstOccurance = 0;
+        if (firstOccurance == -1) firstOccurance = 0;
         int lastOccurance  = BinarySearchDeluxe.lastIndexOf(this.terms, new Term(prefix,0), Term.byPrefixOrder(prefix.length()));
         //if not found
-        if (lastOccurance == -1) lastOccurance = -2;
-        //setting to -2 to allow for 0 based indexing
-        Term [] matches = new Term[(lastOccurance - firstOccurance)+1];
+        if (lastOccurance == -1) lastOccurance = -2;//this.terms.length;
+        
+        Term [] matches = new Term[lastOccurance - firstOccurance+1];
        // copy matches
         for (int i = 0; i< matches.length; i++){
             matches[i] = terms[firstOccurance + i];
         }
-        Arrays.sort(matches, Term.byReverseWeightOrder());
+        MergeX.sort(matches, Term.byReverseWeightOrder());
         return matches;
     }
     
