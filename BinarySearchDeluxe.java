@@ -59,17 +59,27 @@ public class BinarySearchDeluxe {
         System.out.println("Item: 10");
         System.out.print(BinarySearchDeluxe.firstIndexOf (numbers, 10, Collections.reverseOrder()) + "\t");
         System.out.println(BinarySearchDeluxe.lastIndexOf(numbers, 10, Collections.reverseOrder()));
+        System.out.println((BinarySearchDeluxe.lastIndexOf(numbers, 10, Collections.reverseOrder()))- 
+                           (BinarySearchDeluxe.firstIndexOf (numbers, 10, Collections.reverseOrder()))+1);      
         System.out.println("Item: 9");
         System.out.print(BinarySearchDeluxe.firstIndexOf (numbers, 9, Collections.reverseOrder()) + "\t");
         System.out.println(BinarySearchDeluxe.lastIndexOf(numbers, 9, Collections.reverseOrder()));
+        System.out.println((BinarySearchDeluxe.lastIndexOf(numbers, 9, Collections.reverseOrder()))- 
+                           (BinarySearchDeluxe.firstIndexOf (numbers, 9, Collections.reverseOrder()))+1);         
         System.out.println("Item: 4");
         System.out.print(BinarySearchDeluxe.firstIndexOf (numbers, 4, Collections.reverseOrder()) + "\t");
         System.out.println(BinarySearchDeluxe.lastIndexOf(numbers, 4, Collections.reverseOrder()));
+        System.out.println((BinarySearchDeluxe.lastIndexOf(numbers, 4, Collections.reverseOrder()))- 
+                           (BinarySearchDeluxe.firstIndexOf (numbers, 4, Collections.reverseOrder()))+1);         
         System.out.println("Item: 0");
         System.out.print(BinarySearchDeluxe.firstIndexOf (numbers, 0, Collections.reverseOrder()) + "\t");
         System.out.println(BinarySearchDeluxe.lastIndexOf(numbers, 0, Collections.reverseOrder()));
+        System.out.println((BinarySearchDeluxe.lastIndexOf(numbers, 0, Collections.reverseOrder()))- 
+                           (BinarySearchDeluxe.firstIndexOf (numbers, 0, Collections.reverseOrder()))+1);         
         System.out.println("Item: 11");
         System.out.print(BinarySearchDeluxe.firstIndexOf (numbers, 11, Collections.reverseOrder()) + "\t");
         System.out.println(BinarySearchDeluxe.lastIndexOf(numbers, 11, Collections.reverseOrder()));
+        System.out.println((BinarySearchDeluxe.lastIndexOf(numbers, 11, Collections.reverseOrder()))- 
+                           (BinarySearchDeluxe.firstIndexOf (numbers, 11, Collections.reverseOrder()))+1); 
     }
 }
