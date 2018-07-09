@@ -21,12 +21,12 @@ public class Autocomplete {
         if (prefix == null) throw new IllegalArgumentException();
         int firstOccurance = BinarySearchDeluxe.firstIndexOf(this.terms, new Term(prefix,0), Term.byPrefixOrder(prefix.length()));
         //if not found
-        if (firstOccurance == -1) firstOccurance = 0;
+      //  if (firstOccurance == -1) firstOccurance = 0;
         int lastOccurance  = BinarySearchDeluxe.lastIndexOf(this.terms, new Term(prefix,0), Term.byPrefixOrder(prefix.length()));
         //if not found
-        if (lastOccurance == -1) lastOccurance = this.terms.length;
-        
-        Term [] matches = new Term[lastOccurance - firstOccurance];
+        if (lastOccurance == -1) lastOccurance = -2;
+        //setting to -2 to allow for 0 based indexing
+        Term [] matches = new Term[(lastOccurance - firstOccurance)+1];
        // copy matches
         for (int i = 0; i< matches.length; i++){
             matches[i] = terms[firstOccurance + i];
