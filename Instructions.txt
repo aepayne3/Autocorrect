@@ -1,0 +1,16 @@
+To run the code properly:
+
+Compile the code.
+
+Run the program in Dr.Java with the following command scheme:
+run AutocompleteGUI test.txt N
+
+Where N is the number of results that will appear and test.txt represents and text file in the following format:
+####
+AAAA ####
+BBBB ####
+AAAA ####
+...  ...
+XXXX ####
+YYYY ####
+ZZZZ ####
