@@ -4,6 +4,9 @@ import java.util.Collections;
 public class BinarySearchDeluxe {
 
     // Returns the index of the first key in a[] that equals the search key, or -1 if no such key.
+//@param a array of keys
+//@param key key being compared
+//@param comparator function compares two objects of type key  
     public static <Key> int firstIndexOf(Key[] a, Key key, Comparator<Key> comparator){
         if (a == null || key == null || comparator == null) throw new IllegalArgumentException();
         int low = 0;
@@ -29,6 +32,9 @@ public class BinarySearchDeluxe {
     }
 
     // Returns the index of the last key in a[] that equals the search key, or -1 if no such key.
+//@param a array of keys
+//@param key key being compared
+//@param comparator function compares two objects of type key 
     public static <Key> int lastIndexOf(Key[] a, Key key, Comparator<Key> comparator){
         if (a == null || key == null || comparator == null) throw new IllegalArgumentException();
         int low = 0;

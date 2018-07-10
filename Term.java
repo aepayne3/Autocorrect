@@ -1,4 +1,7 @@
 //need to implement the comparator to be able to use it
+/*@author Abigail Payne
+* @author Elaine Schutte
+* */
 import java.util.Comparator;
 import java.util.Arrays;
 
@@ -9,6 +12,8 @@ public class Term implements Comparable<Term> {
   private final String query;
   
 //reference txtbook pg 340 for use of comparator and immutable objects
+//@param query string that is being looked at
+//@param weight is how much weight that query has
   public Term(String query, long weight) {
     if (query == null) throw new IllegalArgumentException();
     if (weight < 0) throw new IllegalArgumentException();
@@ -23,6 +28,8 @@ public class Term implements Comparable<Term> {
   }
   
   public static class CompareByReverseWeightOrder implements Comparator<Term>{
+//@param v string being compared to w by subtracting w-v 
+//@param w comparing to v by subtracting w-c
       public int compare(Term v, Term w) {
           if (v.weight<w.weight) return 1; //removed redundant +
           if (v.weight>w.weight) return -1;
@@ -30,6 +37,7 @@ public class Term implements Comparable<Term> {
       }
   }
     
+//@param number of characters in a word that is being looked at
   public static Comparator<Term> byPrefixOrder(int r) {
       if (r < 0) throw new IllegalArgumentException();
       return new CompareByPrefixOrder(r);
@@ -51,6 +59,7 @@ public class Term implements Comparable<Term> {
   }
 
   //compares two terms in the lexicographic order by query
+//@param that term being compared to current term
   public int compareTo(Term that) {return this.query.compareTo(that.query);}//another part where it's convention to use this. not a.
 
     // Returns a string representation of this term in the following format:

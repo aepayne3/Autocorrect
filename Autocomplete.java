@@ -1,10 +1,14 @@
 //import java.util.Arrays;
+/*@author Abigail Payne
+* @author Elaine Schutte
+* */
 import edu.princeton.cs.algs4.MergeX;
 
 public class Autocomplete {
     private final Term[] terms;
     
     // Initializes the data structure from the given array of terms.
+//@param terms list of terms to be considered for autocomplete
     public Autocomplete(Term[] terms){
         if (terms == null) throw new IllegalArgumentException();
         this.terms = new Term[terms.length];
@@ -18,6 +22,7 @@ public class Autocomplete {
     }
 
     // Returns all terms that start with the given prefix, in descending order of weight.
+//@param prefix letters used to find list of words that start with that
     public Term[] allMatches(String prefix){
         if (prefix == null) throw new IllegalArgumentException();
         int firstOccurance = BinarySearchDeluxe.firstIndexOf(this.terms, new Term(prefix,0), Term.byPrefixOrder(prefix.length()));
@@ -27,7 +32,7 @@ public class Autocomplete {
         //if not found
         if (lastOccurance == -1) lastOccurance = -2;//this.terms.length;
         
-        Term [] matches = new Term[lastOccurance - firstOccurance+1];
+        Term [] matches = new Term[(lastOccurance - firstOccurance)+1];
        // copy matches
         for (int i = 0; i< matches.length; i++){
             matches[i] = terms[firstOccurance + i];
@@ -37,6 +42,7 @@ public class Autocomplete {
     }
     
     // Returns the number of terms that start with the given prefix.
+//@param prefix letters used to find list of words that start with that
     public int numberOfMatches(String prefix){
         if (prefix == null) throw new IllegalArgumentException();
         return (allMatches(prefix)).length;
