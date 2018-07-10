@@ -7,7 +7,7 @@
  *  
  *
  *  Hours to complete assignment (optional): 
- *
+ * Abigail - 9
  ******************************************************************************/
 
 
@@ -33,7 +33,7 @@ Copy over N terms into an array = N
 allMatches(): 
 N=total # of terms, M=# of matches
 (assuming terms array already constructed, otherwise add about answer)
-+ binary search (finds middle and goes up or down list) – 2logN+M = logn+M 
++ binary search (finds middle and goes up or down list) â€“ 2logN+M = logn+M 
 + copying terms to new array = M
 + MergeX-mergesort (worst case) = mlogm
 =log(N)+MlogM+2M   = log(N)+MlogM+M
@@ -64,12 +64,12 @@ No known bugs/limitations
 4. https://rosettacode.org/wiki/Binary_search
 5. https://stackoverflow.com/questions/6000810/printing-with-t-tabs-does-not-result-in-aligned-columns
 6. https://docs.oracle.com/javase/7/docs/api/java/util/Arrays.html#sort(java.lang.Object[]) 
-
+7. https://algs4.cs.princeton.edu/code/javadoc/edu/princeton/cs/algs4/MergeX.html
 
 /******************************************************************************
  *  Describe any serious problems you encountered.                    
  *****************************************************************************/
-No serious problems
+No serious problems were encountered
 
 /******************************************************************************
  *  If you worked with a partner, assert below that you followed
