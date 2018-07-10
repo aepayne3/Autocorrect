@@ -22,7 +22,7 @@ public class Autocomplete {
         if (prefix == null) throw new IllegalArgumentException();
         int firstOccurance = BinarySearchDeluxe.firstIndexOf(this.terms, new Term(prefix,0), Term.byPrefixOrder(prefix.length()));
         //if not found
-        if (firstOccurance == -1) firstOccurance = 0;
+        //if (firstOccurance == -1) firstOccurance = 0;
         int lastOccurance  = BinarySearchDeluxe.lastIndexOf(this.terms, new Term(prefix,0), Term.byPrefixOrder(prefix.length()));
         //if not found
         if (lastOccurance == -1) lastOccurance = -2;//this.terms.length;
